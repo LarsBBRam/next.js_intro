@@ -2,8 +2,6 @@ import { Figtree, Macondo } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/UI/Header";
 
-
-
 const figTree = Figtree({
   variable: "--font-figtree",
   subsets: ["latin"],
@@ -23,17 +21,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${macondo.className} antialiased bg-black`}>
-         <Header/>
-          
-          <main className="grid gap-24 mb-24">
-        {children}
+      <body className={`${macondo.className} antialiased bg-black`}>
+        <Header />
 
-          </main>
-
-
-
+        <main className="grid gap-24 mb-24">{children}</main>
       </body>
     </html>
   );

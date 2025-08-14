@@ -9,7 +9,9 @@ export default async function ProductPage({ params }) {
   const param = getParam.product;
 
   console.log(param);
+
   const product = productData.products[param - 1];
+  
   console.log(product);
 
   if (!product) {
