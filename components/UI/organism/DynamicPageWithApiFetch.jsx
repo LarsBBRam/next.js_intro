@@ -49,10 +49,10 @@ export default async function DynamicPageWithApiFetch({
             />
           </div>
           <div>
-            <p>${magicProduct.category}</p>
+            <p>{magicProduct.category}</p>
             <p>${magicProduct.price}</p>
-            <p>${magicProduct.description}</p>
-            <p>${magicProduct.stock}</p>
+            <p>{magicProduct.description}</p>
+            <p>{magicProduct.stock}</p>
           </div>
         </section>
       </>

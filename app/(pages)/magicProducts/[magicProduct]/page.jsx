@@ -1,4 +1,4 @@
-import DynamicPageWithApiFetch from "@/components/UI/molecules/DynamicPageWithApiFetch";
+import DynamicPageWithApiFetch from "@/components/UI/organism/DynamicPageWithApiFetch";
 
 export default async function MagicProductPage({ params }) {
   const param = await params;
