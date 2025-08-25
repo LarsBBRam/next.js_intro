@@ -1,3 +1,4 @@
+import { baseUrl } from "@/utils/baseUrl";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -6,19 +7,16 @@ export default async function DynamicPageWithApiFetch({
   endpoint,
   value,
 }) {
-  const magicDataRequest = await fetch(
-    `http://localhost:3000/api/magicProducts`,
-    {
-      cache: "no-store",
-    }
-  );
+  const magicDataRequest = await fetch(`${baseUrl}/api/${endpoint}`, {
+    cache: "no-store",
+  });
 
   const magicDataResult = await magicDataRequest.json();
 
   console.log(magicDataResult);
   console.log(param.magicProduct);
 
-  const magicProduct = magicDataResult[param.magicProduct];
+  const magicProduct = magicDataResult[param[value]];
 
   if (!magicProduct) {
     return (
@@ -40,7 +38,7 @@ export default async function DynamicPageWithApiFetch({
           <h2 className="text-7x1 p-8 border-2 border-green-500 rounded bg-white/50">
             {magicProduct.title}
           </h2>
-          <div className="max-w-[350px] h-auto">
+          <div className="w-[350px] h-auto">
             <Image
               alt={`image of ${magicProduct.title}`}
               src={magicProduct.image}

@@ -1,7 +1,7 @@
-import { Box, MappedBoxes } from "@/components/UI/base/Box";
+import { Box, MappedBoxes } from "@/components/base/Box";
 import { boxData } from "@/data/boxData";
 import BoxSection from "./index/components/sections/BoxSection";
-import { ScreenSection } from "@/components/UI/base/Sections";
+import { ScreenSection } from "@/components/base/Sections";
 
 export default function HomePage() {
   return (

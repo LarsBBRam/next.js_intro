@@ -1,4 +1,4 @@
-import { MappedBoxes } from "@/components/UI/base/Box";
+import { MappedBoxes } from "@/components/base/Box";
 
 export default function BoxSection(){
     return (
